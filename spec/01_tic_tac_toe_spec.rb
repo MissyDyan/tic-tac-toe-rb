@@ -1,6 +1,7 @@
 require_relative '../lib/tic_tac_toe.rb'
 
 describe './lib/tic_tac_toe.rb' do
+ 
   describe 'WIN_COMBINATIONS' do
     it 'defines a constant WIN_COMBINATIONS with arrays for each win combination' do
       expect(WIN_COMBINATIONS.size).to eq(8)
@@ -19,7 +20,7 @@ describe './lib/tic_tac_toe.rb' do
   describe '#display_board' do
     it 'prints arbitrary arrangements of the board' do
       board = %w[X X X X O O X O O]
-
+    
       output = capture_puts { display_board(board) }
 
       expect(output).to include(' X | X | X ')
